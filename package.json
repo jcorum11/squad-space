@@ -1,0 +1,35 @@
+{
+  "name": "squad-space",
+  "version": "1.0.0",
+  "description": "A CLI application to help Team Leaders generate HTML pages with team members' contact information on it",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcorum11/squad-space.git"
+  },
+  "keywords": [
+    "contact",
+    "information",
+    "team",
+    "HTML",
+    "generator"
+  ],
+  "author": "Jake",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jcorum11/squad-space/issues"
+  },
+  "homepage": "https://github.com/jcorum11/squad-space#readme",
+  "dependencies": {
+    "inquirer": "^7.3.0"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0"
+  }
+}
