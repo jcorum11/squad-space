@@ -2,6 +2,7 @@ const Engineer = require("../lib/Engineer");
 
 test("creates an Engineer object", () => {
     const engineer = new Engineer("Jake", "12345", "jake@gmail.com", "jcorum11");
+    console.log(engineer);
 
     expect(engineer.name).toBe("Jake");
     expect(engineer.id).toBe("12345");
