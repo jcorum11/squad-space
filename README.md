@@ -16,7 +16,7 @@
   Clone the repo, must have node installed
 
   ## Usage
-  use "node index.js" in the command line. Watch this video [Instructions](https://drive.google.com/file/d/1_Nhx6R5VqXlO1jIGv81JMxTaZPtWxdsI/view)
+  use "node index.js" in the command line. Watch this video [Instructions](https://drive.google.com/file/d/10AFpHpCkJ0IGI0rzhIjByOVc875f_ajk/view)
 
   ## License
   [MIT License](https://choosealicense.com/licenses/mit/)
