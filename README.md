@@ -4,6 +4,7 @@
   [![License](https://img.shields.io/badge/license-MIT-green)]
 
   ## Description
+  A CLI to help keep team information clean and accessible
 
   ## Table of Contents
   * [Installation](#installation)
