@@ -8,4 +8,10 @@ test("creates an Engineer object", () => {
     expect(engineer.email).toBe("jake@gmail.com");
     expect(engineer.type).toBe("engineer");
     expect(engineer.githubUsername).toBe("jcorum11");
+
+    expect(engineer.getName()).toBe("Jake");
+    expect(engineer.getId()).toBe("12345");
+    expect(engineer.getEmail()).toBe("jake@gmail.com");
+    expect(engineer.getRole()).toBe("engineer");
+    expect(engineer.getGithub()).toBe("jcorum11");
 });
