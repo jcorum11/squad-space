@@ -1,4 +1,6 @@
+//generates employee card html to be added to main html
 const generateCard = employee => {
+    // variables to let last object attribute switch depending on class
     let other = ""
     let otherName = ""
     switch (employee.type) {
@@ -33,6 +35,7 @@ const generateCard = employee => {
 </div>`;
 }
 
+// generate main page html
 const generateHTML = employeeHtmlCards => {
 return `<!DOCTYPE html>
 <html lang="en">

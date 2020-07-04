@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const runProgram = require("./src/runProgram");
 
+// questions to ask user on start
 inquirer
     .prompt([
         {
@@ -14,4 +15,5 @@ inquirer
             message: "First, we'll need some info about your team members. Then we'll do the heavy lifting for you. Lets get started!"
         }
     ])
+    // send user to main questions
     .then(questions => runProgram());

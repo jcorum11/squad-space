@@ -5,10 +5,12 @@ const Intern = require("../lib/Intern");
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-let HtmlString = "";
+// string to concatenate employee cards to 
 let employeeCardsHtml = "";
 
+// main program
 const runProgram = () => {
+    // main questions
     inquirer
         .prompt([
             {
@@ -33,7 +35,7 @@ const runProgram = () => {
                 message: "What is their work email?"
             },
             {
-                type: "input", 
+                type: "input", // only run if employee is intern
                 name: "school", 
                 message: "What school did they go to?", 
                 when: function(answers) {
@@ -41,7 +43,7 @@ const runProgram = () => {
                 }
             },
             {
-                type: "input", 
+                type: "input", // only run if employee is engineer
                 name: "githubUsername", 
                 message: "What is their GitHub username?", 
                 when: function(answers) {
@@ -49,7 +51,7 @@ const runProgram = () => {
                 }
             },
             {
-                type: "input", 
+                type: "input", // only run if employee is manager
                 name: "officeNumber", 
                 message: "What is their office number?", 
                 when: function(answers) {
@@ -57,33 +59,29 @@ const runProgram = () => {
                 }
             },
             {
-                type: "confirm",
+                type: "confirm", // if yes then will rerun program
                 name: "addAnother",
                 message: "Would you like to add other team members?"
             }
         ])
         .then(answers => {
+            // if intern then create intern object and add intern card to html string
             if (answers.type === "intern") {
                 const intern = new Intern(answers.name, answers.id, answers.email, answers.type, answers.school);
                 employeeCardsHtml += generateCard(intern);
-                // fs.appendFile("./dist/squad-space.html", generateHTML(intern), err => {
-                //     if (err) fs.writeFile("./dist/squad-space.html", generateHTML(intern), err => {if (err) throw err});
-                // });
             }
+            // if engineer then create engineer object and add engineer card to html string
             else if (answers.type === "engineer") {
                 const engineer = new Engineer(answers.name, answers.id, answers.email, answers.type, answers.githubUsername);
                 employeeCardsHtml += generateCard(engineer);
-                // fs.appendFile("./dist/squad-space.html", generateHTML(engineer), err => {
-                //     if (err) fs.writeFile("./dist/squad-space.html", generateHTML(engineer), err => {if (err) throw err});
-                // });
             }
+            // if manager then create manager object and add manager card to html string
             else if (answers.type === "manager") {
                 const manager = new Manager(answers.name, answers.id, answers.email, answers.type, answers.officeNumber);
                 employeeCardsHtml += generateCard(manager);
-                // fs.appendFile("./dist/squad-space.html", generateHTML(manager), err => {
-                //     if (err) fs.writeFile("./dist/squad-space.html", generateHTML(manager), err => {if (err) throw err});
-                // });
             }
+
+            // if confirm question is yes then will rerun program else it will write html
             if (answers.addAnother) {
                 runProgram();
             }
