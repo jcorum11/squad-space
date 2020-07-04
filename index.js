@@ -15,7 +15,7 @@ const runProgram = () => {
             {
                 type: "list",
                 name: "type",
-                choices: ["manager", "intern", "engineer"]
+                choices: ["intern", "engineer", "manager"]
             },
             {
                 type: "input",
