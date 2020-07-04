@@ -4,6 +4,7 @@
   [![License](https://img.shields.io/badge/license-MIT-green)]
 
   ## Description
+  A CLI to help keep team information clean and accessible
 
   ## Table of Contents
   * [Installation](#installation)
@@ -12,10 +13,10 @@
   * [License](#license)
 
   ## Installation
-  Clone the repo and use "node index.js" in the commad line
+  Clone the repo, must have node installed
 
   ## Usage
-  use "node index.js" in the command line
+  use "node index.js" in the command line. Watch this video [Instructions](https://drive.google.com/file/d/10AFpHpCkJ0IGI0rzhIjByOVc875f_ajk/view)
 
   ## License
   [MIT License](https://choosealicense.com/licenses/mit/)
