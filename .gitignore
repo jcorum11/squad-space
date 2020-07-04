@@ -1,6 +1,7 @@
 .DS_store
 .vscode
 test.html
+output.html
 
 # npm
 package-lock.json
